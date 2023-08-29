@@ -27,6 +27,7 @@ class ProfileViewSet(viewsets.ModelViewSet):
             context = {
                 "profile": profile,
                 "projects": profile.project_set.all(),
+                "certificates": profile.certificates.all(),
             }
 
             return render(request, "profile_detail.html", context)

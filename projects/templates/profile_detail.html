@@ -15,4 +15,9 @@ Detalhes do Perfil
 <p>Descrição: {{ project.description }}</p>
 <p>Skill: {{ project.key_skill }}</p>
 {% endfor %}
+<h2>Certificados</h2>
+{% for certificate in certificates %}
+<h2>Nome: {{certificate.name}}</h2>
+<p>Instituição: {{certificate.certifying_institution}}</p>
+{% endfor %}
 {% endblock %}
